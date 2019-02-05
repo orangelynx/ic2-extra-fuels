@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ic2_extra_fuels",
+  "name": "IC2 Extra Fuels",
+  "description": "Make Industrial Craft 2's Semifluid Generator accept any fluid you like! E.g. Buildcraft's gaseous and dense fuel.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Orangelynx"],
+  "credits": "The Forge and FML guys, IC2 and Buildcraft Devs.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

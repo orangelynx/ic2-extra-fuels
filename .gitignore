@@ -1,0 +1,24 @@
+## Based on GitHub's Eclipse .gitignore
+
+run/
+.gradle/
+gradle/
+build/
+classes/
+gradle-app.setting
+
+gradlew
+gradlew.bat
+
+## IntelliJ IDEA
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# External tool builders
+.externalToolBuilders/
+
+# PDT-specific
+.buildpath

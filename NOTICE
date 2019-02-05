@@ -1,0 +1,13 @@
+This software uses, includes or depends on the following projects:
+
+- opencsv
+This software depends and includes parts of opencsv (http://opencsv.sourceforge.net) which is licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0).
+Special thanks to the creators and contributors of this project, especially Scott Conway, Glen Smith and Adrew Rucker Jones.
+
+- Industrial Craft 2
+This software depends on Industrial Craft 2 (https://industral-craft.net) which is used in accordance with https://forum.industrial-craft.net/thread/344-important-notes-regarding-the-publishment-of-ic%C2%B2-add-ons/
+Special thanks to the developers of this mod.
+
+- Minecraft Forge
+This software depends on Minecraft Forge (https://minecraftforge.net) which is licensed under the LGPL 2.1 (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt)
+Special thanks to the creators, contributors and maintainers of this mod.

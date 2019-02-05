@@ -5,10 +5,10 @@ This mod is an [Industrial Craft 2](https://industrial-craft.net) addon that all
 The mod is especially intended to be used by users of Buildcraft until the new set of fuels introduced in Buildcraft 7.99a (Dense Fuel, Gaseous Fuel, etc.) are officially supported by Industrial Craft. See [this bug report](https://bt.industrial-craft.net/view.php?id=2345).
 
 ## Download
-Compiled releases are found under the project's [release page](/releases).
+Compiled releases are found under the project's [release page](https://github.com/orangelynx/ic2-extra-fuels/releases).
 
 ## User Guide
-You may compile the project yourself or download a release version. Simply place the `*.jar` file into the `/mods` folder. Upon startup, a default config file `additionalFuels.csv` ([link](assets/config/additionalFuels.csv)) will be created in the configs folder `/configs`.
+You may compile the project yourself or download a release version. Simply place the `*.jar` file into the `/mods` folder. Upon startup, a default config file `additionalFuels.csv` ([link](src/main/resources/assets/config/additionalFuels.csv)) will be created in the configs folder `/configs`.
 
 Each line in the `additionalFuels.csv` config file adds a liquid to be processed by the Semifluid Generator. The format is
 

@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import ic2.api.recipe.Recipes;
 
 
-@Mod(modid = Ic2ExtraFuels.MODID, name = Ic2ExtraFuels.NAME, version = Ic2ExtraFuels.VERSION)
+@Mod(modid = Ic2ExtraFuels.MODID, name = Ic2ExtraFuels.NAME, version = Ic2ExtraFuels.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
 public class Ic2ExtraFuels {
     public static final String MODID = "ic2_extra_fuels";
     public static final String NAME = "IC2 Extra Fuels";

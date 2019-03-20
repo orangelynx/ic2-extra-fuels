@@ -15,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.0"
+version = "1.1"
 group = "orangelynx.ic2-extra-fuels" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ic2-extra-fuels"
 
@@ -32,7 +32,7 @@ repositories {
 }
 
 minecraft {
-    version = "1.12.2-14.23.5.2808"
+    version = "1.12.2-14.23.5.2814"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -40,7 +40,7 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20171003"
+    mappings = "stable_39"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
@@ -68,7 +68,7 @@ dependencies {
 
     compile 'com.opencsv:opencsv:4.4'
 
-    compile 'net.industrial-craft:industrialcraft-2:2.8.110-ex112:api'
+    compile 'net.industrial-craft:industrialcraft-2:2.8.111-ex112:api'
 }
 
 processResources {

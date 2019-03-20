@@ -17,11 +17,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import ic2.api.recipe.Recipes;
 
 
-@Mod(modid = Ic2ExtraFuels.MODID, name = Ic2ExtraFuels.NAME, version = Ic2ExtraFuels.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
+@Mod(modid = Ic2ExtraFuels.MODID, name = Ic2ExtraFuels.NAME, version = Ic2ExtraFuels.VERSION, acceptableRemoteVersions = "*")
 public class Ic2ExtraFuels {
     public static final String MODID = "ic2_extra_fuels";
     public static final String NAME = "IC2 Extra Fuels";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.1";
 
     private static final String ADDITIONAL_FUELS_CFG_FILE_NAME = "additionalFuels.csv";
 

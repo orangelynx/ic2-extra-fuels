@@ -30,16 +30,18 @@ public class Ic2ExtraFuels {
     private List<Fuel> additionalFuels = new ArrayList<>();
 
     public final class Fuel {
-        public Fuel(String name, int amountConsumedPerTick, double powerGeneratedPerTick)
+        public Fuel(String name, int amountConsumedPerTick, double powerGeneratedPerTick, int heatGeneratedPerTick)
         {
             this.name = name;
             this.amountConsumedPerTick = amountConsumedPerTick;
             this.powerGeneratedPerTick = powerGeneratedPerTick;
+            this.heatGeneratedPerTick = heatGeneratedPerTick;
         }
 
         public String name;
         public int amountConsumedPerTick;
         public double powerGeneratedPerTick;
+        public int heatGeneratedPerTick;
     }
 
     @EventHandler
@@ -61,7 +63,8 @@ public class Ic2ExtraFuels {
             while ((nextLine = additionalFuelsConfigFileReader.readNext()) != null) {
                 additionalFuels.add(new Fuel(nextLine[0],
                                              Integer.parseInt(nextLine[1]),
-                                             Double.parseDouble(nextLine[2])));
+                                             Double.parseDouble(nextLine[2]),
+                                             Double.parseDouble(nextLine[3])));
             }
 
             additionalFuelsConfigFileReader.close();
@@ -80,6 +83,7 @@ public class Ic2ExtraFuels {
     {
         for (Fuel fuel: additionalFuels) {
             Recipes.semiFluidGenerator.addFluid(fuel.name, fuel.amountConsumedPerTick, fuel.powerGeneratedPerTick);
+            Recipes.fluidHeatGenerator.addFluid(fuel.name, fuel.amountConsumedPerTick, fuel.heatGeneratedPerTick);
         }
     }
 

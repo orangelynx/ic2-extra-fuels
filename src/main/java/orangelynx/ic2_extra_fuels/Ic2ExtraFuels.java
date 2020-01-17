@@ -21,7 +21,7 @@ import ic2.api.recipe.Recipes;
 public class Ic2ExtraFuels {
     public static final String MODID = "ic2_extra_fuels";
     public static final String NAME = "IC2 Extra Fuels";
-    public static final String VERSION = "1.2";
+    public static final String VERSION = "1.2-beta";
 
     private static final String ADDITIONAL_FUELS_CFG_FILE_NAME = "additionalFuels.csv";
 
@@ -64,7 +64,7 @@ public class Ic2ExtraFuels {
                 additionalFuels.add(new Fuel(nextLine[0],
                                              Integer.parseInt(nextLine[1]),
                                              Double.parseDouble(nextLine[2]),
-                                             Double.parseInt(nextLine[3])));
+                                             Integer.parseInt(nextLine[3])));
             }
 
             additionalFuelsConfigFileReader.close();

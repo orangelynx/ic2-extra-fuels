@@ -61,7 +61,6 @@ public class Ic2ExtraFuels {
 
             String[] nextLine;
             while ((nextLine = additionalFuelsConfigFileReader.readNext()) != null) {
-                int heatPerTick = nextLine.length > 3 ? Integer.parseInt(nextLine[3]) : 0;
                 additionalFuels.add(new Fuel(nextLine[0],
                                              Integer.parseInt(nextLine[1]),
                                              Double.parseDouble(nextLine[2]),

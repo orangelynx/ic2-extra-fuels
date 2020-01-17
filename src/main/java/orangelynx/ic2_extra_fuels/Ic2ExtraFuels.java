@@ -64,7 +64,7 @@ public class Ic2ExtraFuels {
                 additionalFuels.add(new Fuel(nextLine[0],
                                              Integer.parseInt(nextLine[1]),
                                              Double.parseDouble(nextLine[2]),
-                                             heatPerTick));
+                                             Double.parseDouble(nextLine[3])));
             }
 
             additionalFuelsConfigFileReader.close();

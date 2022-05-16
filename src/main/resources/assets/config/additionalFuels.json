@@ -1,0 +1,48 @@
+{
+  "semiFluidGenerator": [
+    {
+      "name" : "fuel_dense",
+      "amountConsumedPerTick": "4",
+      "generatedPerTick": "2",
+      "skipIfExists": true
+    },
+    {
+      "name" : "fuel_light",
+      "amountConsumedPerTick": "2",
+      "generatedPerTick": "16",
+      "skipIfExists": true
+    },
+    {
+      "name" : "fuel_gaseous",
+      "amountConsumedPerTick": "1",
+      "generatedPerTick": "8",
+      "skipIfExists": true
+    },
+    {
+      "name" : "creosote",
+      "amountConsumedPerTick": "4",
+      "generatedPerTick": "2",
+      "skipIfExists": true
+    }
+  ],
+  "fluidHeatGenerator": [
+    {
+      "name" : "fuel_dense",
+      "amountConsumedPerTick": "4",
+      "generatedPerTick": "8",
+      "skipIfExists": true
+    },
+    {
+      "name" : "fuel_light",
+      "amountConsumedPerTick": "2",
+      "generatedPerTick": "64",
+      "skipIfExists": true
+    },
+    {
+      "name" : "fuel_gaseous",
+      "amountConsumedPerTick": "1",
+      "generatedPerTick": "32",
+      "skipIfExists": true
+    }
+  ]
+}

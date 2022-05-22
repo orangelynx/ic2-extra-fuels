@@ -1,3 +1,5 @@
+import java.nio.charset.StandardCharsets
+
 buildscript {
     repositories {
         jcenter()
@@ -15,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.1"
+version = "1.2-ic2-219"
 group = "orangelynx.ic2-extra-fuels" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ic2-extra-fuels"
 
@@ -66,9 +68,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    compile 'com.opencsv:opencsv:4.4'
-
-    compile 'net.industrial-craft:industrialcraft-2:2.8.111-ex112:api'
+    compile 'net.industrial-craft:industrialcraft-2:2.8.219-ex112:api'
 }
 
 processResources {
@@ -112,3 +112,30 @@ reobf {
 }
 tasks.reobfShadowJar.mustRunAfter shadowJar
 tasks.build.dependsOn reobfShadowJar
+
+
+StringBuilder stringBuilder = new StringBuilder()
+FileReader fileReader = new FileReader("src/main/java/orangelynx/ic2_extra_fuels/Constant.java")
+BufferedReader bufferedReader = new BufferedReader(fileReader)
+String line
+boolean first = true
+while ((line = bufferedReader.readLine()) != null) {
+    if (line.contains("public static final String VERSION")) {
+        int i = line.indexOf("public static final String VERSION")
+        line = line.substring(0, i)
+        line = line + "public static final String VERSION = \"" + version + "\";"
+    }
+    if (first) {
+        first = false
+    } else {
+        stringBuilder.append("\n")
+    }
+    stringBuilder.append(line)
+}
+bufferedReader.close()
+fileReader.close()
+if (stringBuilder.length() > 0) {
+    FileOutputStream fileOutputStream = new FileOutputStream("src/main/java/orangelynx/ic2_extra_fuels/Constant.java")
+    fileOutputStream.write(stringBuilder.toString().getBytes(StandardCharsets.UTF_8))
+    fileOutputStream.close()
+}
